@@ -1,0 +1,1 @@
+ScalarFlow offers a scalar-valued autograd engine that constructs a computation graph of the mathematical expression in the background and computes the gradient of the final node (root node) with respect to all the internal nodes as well as the input parameters. The Neural Network library supports construction of Multi-Layer Perceptrons. 
