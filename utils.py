@@ -1,6 +1,5 @@
 from graphviz import Digraph
 
-
 def trace(root):
     nodes, edges = set(), set()
     def build(v):

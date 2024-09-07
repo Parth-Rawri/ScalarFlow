@@ -80,25 +80,25 @@ def test_check_two():
     print(f'test two successful!')
 
 def test_check_utils():
-    # a very simple example
-    x = Value(1.0)
-    y = (x * 2 + 1).relu()
+    # # a very simple example
+    # x = Value(1.0)
+    # y = (x * 2 + 1).relu()
+    # y.backward()
+    # dot = draw_dot(y)
+    # # Save the graph to a file
+    # dot.render(filename='sf_computation_graph', format='png', view=True) 
+
+    # a simple 2D neuron
+    random.seed(1337)
+    n = nn.Neuron(2)
+    x = [Value(1.0), Value(-2.0)]
+    y = n(x)
     y.backward()
     dot = draw_dot(y)
     # Save the graph to a file
     dot.render(filename='sf_computation_graph', format='png', view=True) 
 
-    # # a simple 2D neuron
-    # random.seed(1337)
-    # n = nn.Neuron(2)
-    # x = [Value(1.0), Value(-2.0)]
-    # y = n(x)
-    # y.backward()
-    # draw_dot(y)
-
-
 if __name__ == "__main__":
     test_check_one()
     test_check_two()
     test_check_utils()
-
