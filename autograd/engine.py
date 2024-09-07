@@ -31,6 +31,9 @@ class Value:
 
     def __sub__(self, other): # self - other
         return self + (-other) # treating subtraction as a special case of addition
+    
+    def __rsub__(self, other):
+        return self + (-other)
 
     def __mul__(self, other):
         other = other if isinstance(other, Value) else Value(other)
